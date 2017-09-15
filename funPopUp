@@ -3,8 +3,8 @@
 
 //binds a variable around a tag and it's content 
 function wrapCont(tag){
-		return function (contenuto){
+		return function (content){
     var apri = "<" + tag + ">";
     var chiudi = "</" + tag +">";
-    return(apri + contenuto + chiudi );
+    return(apri + content + chiudi );
  }}
