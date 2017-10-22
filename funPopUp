@@ -1,0 +1,21 @@
+//will create some functions as utils
+
+
+//binds a variable around a tag and it's content 
+function wrapCont(tag){
+		return function (content){
+    var beginit = "<" + tag + ">";
+    var endit = "</" + tag +">";
+    return(beginit + content + endit );
+    
+}}
+
+//adds id or attribute and it's content
+function addEl(str, attr, content){
+    //id, class or attribute
+    var element = " " + attr + "='" + content + "'";
+    var count = str.indexOf(">");
+    var start = str.slice(0,count);
+    var end = str.slice(count);
+    
+    return (start + element + end);}
